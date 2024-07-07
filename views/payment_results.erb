@@ -1,0 +1,15 @@
+<h1>Payment Results</h1>
+
+<p>APR
+<br><%=@params.fetch("user_apr").to_f.to_fs(:percentage, {:precision => 4})%></p>
+
+<p>Number of years
+<br><%=@params.fetch("user_years").to_f.to_fs%></p>
+
+<p>Principal
+<br><%=@pv.to_fs(:currency)%></p>
+
+<p>Payment
+<br><%=@p.to_fs(:currency)%></p>
+
+<a href="/payment/new">Calculate another payment</a>
